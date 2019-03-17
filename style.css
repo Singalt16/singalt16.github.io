@@ -5,12 +5,14 @@ html {
 body {
     box-sizing: border-box;
     margin: 0;
-    height: 100%;
     font-family: "Trebuchet MS", Helvetica, sans-serif;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    background-color: #003055;
     background-image: url("background.png");
-    background-repeat: no-repeat;
+    background-size: 2000px 1800px;
     background-attachment: fixed;
+    background-position: center;
 }
 
 .background-img {
@@ -18,13 +20,10 @@ body {
 }
 
 .main-container {
-    position: absolute;
+    position: relative;
     margin: 0;
     padding: 0;
-    left: 50%;
-    -webkit-transform: translate(-50%, 0);
-    transform: translate(-50%, 0);
-    height: 100%;
+    height: 100vh;
     /*-webkit-border-image: -webkit-gradient(linear, left top, left bottom, from(rgba(200, 200, 200, 0)), to(rgba(200, 200, 200, 0)), color-stop(0.5, rgba(200, 200, 200, 0.5)), color-stop(0.5, rgba(200, 200, 200, 0.5))) 0 0 0 0 repeat repeat;*/
     /*background-color: rgba(200, 200, 200, 0.5);*/
 }
@@ -84,7 +83,7 @@ body {
 }
 
 .profile-pic:hover {
-    width: 200px;
+    width: 180px;
 }
 
 @keyframes profile-pic {
@@ -206,9 +205,102 @@ body {
 }
 
 .test {
-    position: absolute;
-    top: 1000px;
+    box-sizing: border-box;
+    padding: 50px;
     width: 100%;
-    height: 1500px;
     background-image: linear-gradient(to top, rgba(8, 0, 8, 1), rgba(80, 60, 80, 1));
+}
+
+.bio {
+    text-align: center;
+    position: relative;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    color: rgb(200, 190, 200);
+    user-select: none;
+}
+
+.bio p, span{
+    font-size: 20px;
+}
+
+.interests {
+    text-align: center;
+    position: relative;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    margin-bottom: 80px;
+    width: 40%;
+    user-select: none;
+    transition-property: margin;
+    transition-duration: 0.5s;
+}
+
+.interests:hover {
+   margin-bottom: 30px;
+}
+
+.interests:hover .interest {
+    margin-bottom: -10px;
+}
+
+.interest {
+    box-sizing: border-box;
+    margin-bottom: -60px;
+    background-color: rgb(130, 80, 80);
+    width: 100%;
+    padding: 20px;
+    font-size: 20px;
+    color: rgb(220, 200, 220);
+    border: 1px solid rgb(170, 130, 170);
+    border-radius: 10px;
+    transition-property: margin;
+    transition-duration: 0.5s;
+}
+
+.bio h2 {
+    color: rgb(240, 220, 240);
+}
+
+.bio-container {
+    padding: 10px 0;
+    width: 100%;
+}
+
+.skills-container h2 {
+    margin: 0;
+    padding: 10px;
+}
+
+.skills {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 10px;
+    list-style: none;
+}
+
+.skills:hover .skill {
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.skills li {
+    display: inline;
+}
+
+.skill {
+    margin: 0 -20px;
+    float: left;
+    width: 50px;
+    transition-property: margin;
+    transition-duration: 0.5s;
 }
