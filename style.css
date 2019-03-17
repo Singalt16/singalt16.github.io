@@ -49,14 +49,14 @@ body {
     transition-duration: 0.3s;
 }
 
-.t5 {animation-duration: 5s;}
-.t3 {animation-duration: 3s;}
-.t6 {animation-duration: 6s;}
-.t2 {animation-duration: 2s;}
-.t2_5 {animation-duration: 2.5s;}
-.t3_5 {animation-duration: 3.5s;}
-.t7_5 {animation-duration: 7.5s;}
-.t4_5 {animation-duration: 4.5s;}
+.t5 {animation-duration: 5.083s;}
+.t3 {animation-duration: 3.5432s;}
+.t6 {animation-duration: 6.24s;}
+.t2 {animation-duration: 1.9334s;}
+.t2_5 {animation-duration: 2.58432s;}
+.t3_5 {animation-duration: 3.4096s;}
+.t7_5 {animation-duration: 7.4293s;}
+.t4_5 {animation-duration: 4.5436s;}
 
 .s30 {width: 30px; height: 30px;}
 .s50 {width: 50px; height: 50px;}
