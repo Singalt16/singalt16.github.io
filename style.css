@@ -31,8 +31,22 @@ a {
     flex-direction: column;
 }
 
+.grows {
+    transition-property: all;
+    transition-duration: 0.3s;
+}
+
+.grows:hover {
+    transform: scale(1.1);
+}
+
 .background-img {
     width: 100%;
+}
+
+.container {
+    width: 100%;
+    padding: 120px 150px;
 }
 
 .main-container {
@@ -40,8 +54,6 @@ a {
     margin: 0;
     padding: 0;
     height: 100vh;
-    /*-webkit-border-image: -webkit-gradient(linear, left top, left bottom, from(rgba(200, 200, 200, 0)), to(rgba(200, 200, 200, 0)), color-stop(0.5, rgba(200, 200, 200, 0.5)), color-stop(0.5, rgba(200, 200, 200, 0.5))) 0 0 0 0 repeat repeat;*/
-    /*background-color: rgba(200, 200, 200, 0.5);*/
 }
 
 .down-arrow {
@@ -53,7 +65,7 @@ a {
     transform: translate(-50%, 0);
 }
 
-.header-container {
+.profile {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -116,7 +128,7 @@ a {
     100% { transform: rotate(0deg) translateX(209px);}
 }
 
-.profile {
+.profile-text {
     user-select: none;
     color: rgb(223, 227, 247);
     margin: 5px;
@@ -174,34 +186,4 @@ a {
 
 .link > img {
     height: 100%;
-}
-
-.skills-container h2 {
-    margin: 0;
-    padding: 10px;
-}
-
-.skills {
-    display: flex;
-    justify-content: center;
-    margin: 0;
-    padding: 10px;
-    list-style: none;
-}
-
-.skills:hover .skill {
-    margin-right: 5px;
-    margin-left: 5px;
-}
-
-.skills li {
-    display: inline;
-}
-
-.skill {
-    margin: 0 -23px;
-    float: left;
-    width: 50px;
-    transition-property: margin;
-    transition-duration: 0.5s;
 }

@@ -1,7 +1,5 @@
 .bio-container {
     box-sizing: border-box;
-    padding: 100px;
-    width: 100%;
     background-color: rgb(255, 250, 255);
 }
 
@@ -26,19 +24,13 @@
 
 .tcnj-logo {
     width: 200px;
-    transition-property: width;
-    transition-duration: 0.5s;
-}
-
-.tcnj-logo:hover {
-    width: 250px;
 }
 
 .interests {
     text-align: center;
     align-items: center;
     margin-bottom: 80px;
-    width: 60%;
+    width: 70%;
     user-select: none;
     transition-property: margin;
     transition-duration: 0.5s;
@@ -61,7 +53,7 @@
     padding: 20px;
     font-size: 20px;
     color: rgb(255, 250, 255);
-    border: 1px solid rgb(170, 130, 170);
+    border: 1px solid rgb(255, 250, 255);
     border-radius: 10px;
     transition-property: margin;
     transition-duration: 0.5s;
