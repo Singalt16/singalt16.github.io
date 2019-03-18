@@ -1,0 +1,14 @@
+.skills-container {
+    text-align: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 50px;
+    width: 100%;
+    background-color: rgb(175, 255, 175);
+}
+
+.skills {
+    text-align: center;
+    color: rgb(100, 90, 100);
+    user-select: none;
+}

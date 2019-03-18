@@ -15,6 +15,16 @@ body {
     background-position: center;
 }
 
+.hl {
+    display: flex;
+    flex-direction: row;
+}
+
+.vl {
+    display: flex;
+    flex-direction: column;
+}
+
 .background-img {
     width: 100%;
 }
@@ -50,17 +60,9 @@ body {
     padding: 0;
     border-radius: 20px;
     width: 900px;
-    height: 470px;
+    height: 500px;
     background-image: linear-gradient(to top, rgba(255,255,255,0.5), rgba(235, 145, 215, 0.3));
     border: 3px solid rgba(0,0,0,0.8);
-}
-
-.profile-pic {
-    width: 150px;
-    border-radius: 100%;
-    border: 2px solid black;
-    transition-property: width;
-    transition-duration: 0.3s;
 }
 
 .t5 {animation-duration: 5.083s;}
@@ -91,8 +93,16 @@ body {
     animation-timing-function: linear;
 }
 
+.profile-pic {
+    width: 150px;
+    border-radius: 100%;
+    border: 2px solid black;
+    transition-property: width;
+    transition-duration: 0.5s;
+}
+
 .profile-pic:hover {
-    width: 180px;
+    width: 220px;
 }
 
 @keyframes profile-pic {
@@ -101,12 +111,13 @@ body {
 }
 
 .profile {
-    color: rgb(30, 20, 30);
-    margin: 10px;
+    user-select: none;
+    color: rgb(223, 227, 247);
+    margin: 5px;
 }
 
 .profile-name {
-    font-size: 40px;
+    font-size: 60px;
 }
 
 .profile-occupation {
@@ -132,8 +143,8 @@ body {
     background-image: linear-gradient(to top, rgba(150, 100, 200, 0.6), rgba(150, 100, 200, 0.9), rgba(200, 100, 150, 0.5));
     height: 25px;
     font-size: 22px;
-    transition-property: opacity;
-    transition-duration: 0.2s;
+    transition-property: opacity, height;
+    transition-duration: 5s;
     user-select: none;
     text-decoration: none;
     color: black;
@@ -143,25 +154,11 @@ body {
 .link:hover {
     background-image: linear-gradient(to top, rgba(150, 100, 200, 1), rgba(150, 100, 200, 1), rgba(200, 100, 150, 1));
     cursor: pointer;
-    /*animation-name: link-hover;*/
-    /*animation-duration: 2s;*/
 }
 
 .link:active {
-    opacity: 0.7;
+    opacity: 0.2;
 }
-
-/*@keyframes link-hover {*/
-    /*0% {*/
-        /*height: 25px;*/
-    /*}*/
-    /*50% {*/
-        /*height: 40px;*/
-    /*}*/
-    /*100% {*/
-        /*height: 25px;*/
-    /*}*/
-/*}*/
 
 .link > span {
     margin: 6px;
@@ -171,124 +168,6 @@ body {
 
 .link > img {
     height: 100%;
-}
-
-.modal {
-    padding: 20px;
-    margin: 0;
-    box-sizing: border-box;
-    display: none;
-    flex-direction: column;
-    /*background-color: rgba(0, 0, 0, 0.5);*/
-    position: relative;
-    width: 100%;
-    height: 100%;
-}
-
-.close {
-    box-sizing: border-box;
-    font-size: 40px;
-    color: white;
-    padding: 10px;
-}
-
-.close:hover {
-    cursor: pointer;
-}
-
-.close:active {
-    opacity: 0.5;
-}
-
-.modal-content {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-}
-
-#resume {
-    align-self: center;
-    box-sizing: border-box;
-    width: 800px;
-    height: 100%;
-}
-
-.test {
-    box-sizing: border-box;
-    padding: 50px;
-    width: 100%;
-    background-image: linear-gradient(to top, rgba(8, 0, 8, 1), rgba(80, 60, 80, 1));
-}
-
-.bio {
-    text-align: center;
-    position: relative;
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    left: 50%;
-    -webkit-transform: translate(-50%, 0);
-    transform: translate(-50%, 0);
-    color: rgb(200, 190, 200);
-    user-select: none;
-}
-
-.bio p, span{
-    font-size: 20px;
-}
-
-.interests {
-    text-align: center;
-    position: relative;
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    left: 50%;
-    -webkit-transform: translate(-50%, 0);
-    transform: translate(-50%, 0);
-    margin-bottom: 80px;
-    width: 40%;
-    user-select: none;
-    transition-property: margin;
-    transition-duration: 0.5s;
-}
-
-.interests:hover {
-   margin-bottom: 30px;
-}
-
-.interests:hover .interest {
-    margin-bottom: -6px;
-}
-
-.interest {
-    z-index: 1;
-    box-sizing: border-box;
-    margin-bottom: -60px;
-    background-color: rgb(140, 88, 88);
-    width: 100%;
-    padding: 20px;
-    font-size: 20px;
-    color: rgb(220, 200, 220);
-    border: 1px solid rgb(170, 130, 170);
-    border-radius: 10px;
-    transition-property: margin;
-    transition-duration: 0.5s;
-}
-
-.interest img {
-    z-index: 0;
-    width: 20px;
-    filter: invert(100%);
-}
-
-.bio h2 {
-    color: rgb(240, 220, 240);
-}
-
-.bio-container {
-    padding: 10px 0;
-    width: 100%;
 }
 
 .skills-container h2 {
@@ -314,7 +193,7 @@ body {
 }
 
 .skill {
-    margin: 0 -20px;
+    margin: 0 -23px;
     float: left;
     width: 50px;
     transition-property: margin;
