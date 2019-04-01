@@ -54,7 +54,7 @@
     color: rgb(45, 35, 45);
     padding: 10px;
     width: 90%;
-    height: 100px;
+    min-height: 100px;
     background-color: rgb(230, 220, 230);
     border-radius: 5px;
     border: 4px solid rgb(40, 30, 40);

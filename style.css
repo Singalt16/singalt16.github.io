@@ -77,7 +77,9 @@ a {
     align-items: center;
     padding: 0;
     border-radius: 10px;
-    width: 900px;
+    min-width: 600px;
+    width: 80%;
+    max-width: 900px;
     height: 450px;
     max-height: 95%;
     background-image: linear-gradient(to top, rgba(255,255,255,0.5), rgba(235, 145, 215, 0.3));
@@ -188,3 +190,6 @@ a {
 .link > img {
     height: 100%;
 }
+
+
+/*TODO: FIX STYLE ISSUES WITH NARROW PAGE*/
