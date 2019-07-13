@@ -8,18 +8,16 @@
 
 .projects {
     padding: 10px;
+    box-sizing: content-box;
     width: 100%;
     color: black;
     perspective: 1000px;
 }
 
-.projects .project {
-    width: 33.333%;
-}
-
-.project {
+.projects > .project {
+    min-width: 260px;
+    max-width: 500px;
     align-items: center;
-    padding: 10px;
     background-color: rgb(40, 40, 85);
 }
 

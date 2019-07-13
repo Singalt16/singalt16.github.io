@@ -1,0 +1,85 @@
+/*------------------------*/
+/*------Basic-Tags--------*/
+/*------------------------*/
+html {
+    height: 100%;
+}
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(1, 17, 44);
+    background-image: url("../images/ball.jpeg");
+    background-size: 1500px;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+@media only screen and (max-device-width: 500px) and (max-aspect-ratio: 1/1){
+    body {
+        background-size: 3150px;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    box-shadow: black;
+}
+
+/*------------------------*/
+/*-----Global-Classes-----*/
+/*------------------------*/
+
+/* flexboxes */
+.hl {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.vl {
+    display: flex;
+    flex-direction: column;
+}
+
+/* elements that resize on hover */
+.grows {
+    transition-property: transform;
+    transition-duration: 0.3s;
+}
+
+.grows:hover {
+    transform: scale(1.1);
+}
+
+/* container */
+.container {
+    width: 100%;
+    padding: 120px;
+}
+
+/* section */
+.hl > .section {
+    flex-grow: 1;
+    flex-basis: 0;
+    box-sizing: border-box;
+    min-width: 300px;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+
+@media screen and (max-width: 900px) {
+    .container {
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+}
+
+
+/*TODO: FIX STYLE ISSUES WITH NARROW PAGE*/

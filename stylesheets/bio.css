@@ -13,13 +13,7 @@
     color: rgb(100, 80, 80);
 }
 
-.bio .bio-section{
-    width: 50%;
-}
-
-.bio-section {
-    padding: 40px;
-    text-align: center;
+.bio .bio-section {
     align-items: center;
 }
 
