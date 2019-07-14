@@ -1,0 +1,125 @@
+.shelf {
+    display: inline-block;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.book-hover-space {
+    position: relative;
+    width: 60px;
+    height: 100px;
+    transition: z-index 0.3s;
+    z-index: 0;
+}
+
+.book-hover-space:hover {
+    z-index: 1;
+}
+
+.book-hover-space:hover .book {
+    transform: translateY(50px) rotateX(-90deg);
+}
+
+.book {
+    margin-left: 20%;
+    pointer-events: none;
+    user-select: none;
+    position: absolute;
+    width: 80px;
+    transform-style: preserve-3d;
+    transform: rotateY(60deg) rotateX(-25deg) rotateZ(-5deg) translateY(60px);
+    transition: transform 0.3s;
+}
+
+.book .front {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    transform: rotateX(90deg) translateZ(40px);
+}
+
+.book .bottom {
+    position: absolute;
+    width: 80px;
+    height: 15px;
+    transform: translateZ(40px);
+}
+
+.book .left {
+    position: absolute;
+    width: 80px;
+    height: 15px;
+    z-index: 1;
+    transform: rotateY(-90deg) translateZ(40px);
+}
+
+.book .front img {
+    width: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.book .bottom img {
+    width: 100%;
+    height: 100%;
+}
+
+.book > div {
+    background-color: inherit;
+}
+
+.book > .left, .book > .bottom {
+    filter: brightness(75%);
+}
+
+.ice-and-fire .bottom, .ice-and-fire .left, .ice-and-fire .right {
+    background-image: linear-gradient(to top, #b84d19, #2c160b);
+}
+
+.harry-potter .bottom, .harry-potter .left, .harry-potter .right {
+    background-image: linear-gradient(to top left, #083e60,  black);
+}
+
+.dating-mirror .bottom, .dating-mirror .left, .dating-mirror .right {
+    background-image: linear-gradient(to left, #4d96ae,  #23607f);
+}
+
+.great-teaching .bottom, .great-teaching .left, .great-teaching .right {
+    background-color: #be3941;
+}
+
+.souls-venus .bottom, .souls-venus .left, .souls-venus .right {
+    background-image: linear-gradient(to top, #2c430a,  black);
+}
+
+@media only screen and (max-device-width: 500px) and (max-aspect-ratio: 1/1){
+    .book-hover-space {
+        width: 150px;
+        height: 150px;
+    }
+
+    .book {
+        width: 150px;
+        transform: rotateY(40deg) rotateX(-35deg) rotateZ(-5deg) translateY(60px);
+    }
+
+    .book .front {
+        width: 150px;
+        height: 150px;
+        transform: rotateX(90deg) translateZ(75px);
+    }
+
+    .book .bottom {
+        width: 150px;
+        height: 40px;
+        transform: translateZ(75px);
+    }
+
+    .book .left {
+        width: 150px;
+        height: 40px;
+        transform: rotateY(-90deg) translateZ(75px);
+    }
+}

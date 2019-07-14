@@ -61,6 +61,8 @@ a {
 .container {
     width: 100%;
     padding: 120px;
+    box-sizing: border-box;
+    max-width: 100%;
 }
 
 /* section */

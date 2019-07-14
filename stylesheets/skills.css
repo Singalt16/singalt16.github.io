@@ -1,35 +1,22 @@
 .skills-container {
     text-align: center;
     align-items: center;
-    box-sizing: border-box;
     padding: 30px;
     color: rgb(244, 255, 255);
     user-select: none;
 }
 
 .skills {
-    padding: 10px;
-    justify-content: center;
+    display: inline-block;
+    max-width: 90%;
+    padding: 5px;
+    flex-wrap: wrap;
     text-align: center;
     user-select: none;
     list-style: none;
-    display: flex;
     margin: 0;
 }
 
-.skills:hover .skill {
-    margin-right: 5px;
-    margin-left: 5px;
-}
-
-.skills li {
-    display: inline;
-}
-
 .skill {
-    margin: 0 -18px;
-    float: left;
-    width: 50px;
-    transition-property: margin;
-    transition-duration: 0.5s;
+    display: inline-block;
 }
