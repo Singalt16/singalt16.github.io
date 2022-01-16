@@ -10,23 +10,20 @@
     position: absolute;
     top: 50%;
     left: 50%;
+    box-sizing: border-box;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0;
-    border-radius: 10px;
-    min-width: 500px;
-    width: 80%;
-    max-width: 900px;
-    height: 450px;
+    width: 90%;
+    max-width: 800px;
+    padding: 50px;
     max-height: 95%;
-    background-image: linear-gradient(to top, rgba(255,255,255,0.5), rgba(235, 145, 215, 0.3));
-    border: 1px solid rgba(0,0,0,0.4);
+    background-color: #ffffff5d;
+    box-shadow: 0 0 5px 5px #ffffff5d;
 }
-
 
 /* looping circles effect */
 .t5 {animation-duration: 5.083s;}
@@ -50,38 +47,53 @@
     transform: translate(0, -50%);
     pointer-events: none;
     border-radius: 100%;
-    background-color: white;
-    opacity: 0.03;
-    animation-name: profile-pic;
+    background-color: #0077a1;
+    opacity: 0.08;
+    animation-name: rotating-ball;
+    transform-origin: center;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
 
-
-.profile-pic {
+.profile-pic-wrapper {
+    object-fit: cover;
     width: 150px;
-    border-radius: 100%;
-    border: 1px solid black;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 50%;
+    position: relative;
 }
 
-@keyframes profile-pic {
-    0% {transform: rotate(360deg) translateX(209px);}
-    100% { transform: rotate(0deg) translateX(209px);}
+.profile-pic {
+    width: 230px;
+    position: absolute;
+    top: 45%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    border: 1px solid rgba(0,0,0,0.2);
+}
+
+@keyframes rotating-ball {
+    0% {transform: rotate(360deg) translateX(250px);}
+    100% { transform: rotate(0deg) translateX(250px);}
 }
 
 
 .profile-text {
-    user-select: none;
-    color: rgb(223, 227, 247);
+    color: white;
     margin: 5px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #60496E;
+    text-shadow: 2px 2px 2px black;
 }
 
 .profile-name {
     font-size: 60px;
+    margin-bottom: 20px;
 }
 
 .profile-occupation {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 
 
@@ -91,31 +103,29 @@
     padding: 0;
     margin: 0;
     list-style-type: none;
-    overflow: auto;
+    overflow: hidden;
 }
 
 .link {
     display: flex;
     flex-direction: row;
+    justify-content: center;
     float: left;
     margin: 10px 20px;
-    border-radius: 3px;
     padding: 15px;
-    background-image: linear-gradient(to top, rgba(150, 100, 200, 0.6), rgba(150, 100, 200, 0.9), rgba(200, 100, 150, 0.5));
+    background-image: radial-gradient(circle at 40px 20px, #ffffff6b 0%, #745078d1 100%);
     height: 25px;
     font-size: 22px;
-    transition-property: opacity, height;
-    transition-duration: 5s;
+    transition-property: opacity, height, background-image;
+    transition-duration: 0.5s;
     user-select: none;
     text-decoration: none;
     color: black;
-    border: 1px solid rgba(0,0,0,0.8);
 }
 
 .link:hover {
-    background-image: linear-gradient(to top, rgba(150, 100, 200, 1), rgba(150, 100, 200, 1), rgba(200, 100, 150, 1));
+    background-image: radial-gradient(circle at 40px 20px, #ffffff 0%, #745078d1 100%);
     cursor: pointer;
-    color: #eedeff;
 }
 
 .link:active {
@@ -132,11 +142,46 @@
     height: 100%;
 }
 
-/* make links smaller when page is small */
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 900px) {
     .link {
         font-size: 18px;
         margin-left: 10px;
         margin-right: 10px;
     }
+
+    .profile {
+        padding: 50px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .links-list {
+        align-self: stretch;
+        flex-direction: column;
+    }
+
+    .links-list > li {
+        display: flex;
+        align-self: stretch;
+    }
+
+    .link {
+        flex: 1;
+    }
+
+    .profile {
+        width: 100%;
+        padding: 50px 30px;
+    }
+
+    .profile-name {
+        font-size: 40px;
+        margin-bottom: 20px;
+    }
+    
+    .profile-occupation {
+        font-size: 20px;
+        margin-bottom: 40px;
+    }
+    
 }

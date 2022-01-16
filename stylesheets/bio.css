@@ -6,7 +6,6 @@
 .bio {
     text-align: center;
     color: rgb(100, 90, 100);
-    user-select: none;
 }
 
 .bio h1 {
@@ -15,10 +14,23 @@
 
 .bio .bio-section {
     align-items: center;
+    position: relative;
 }
 
-.tcnj-logo {
-    width: 200px;
+.interests-section {
+    height: 220px;
+}
+
+.external-logos-container {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.external-logo {
+    width: 150px;
 }
 
 .interests {
@@ -26,6 +38,8 @@
     align-items: center;
     margin-bottom: 80px;
     user-select: none;
+    position: absolute;
+    top: 100px;
     transition-property: margin;
     transition-duration: 0.5s;
 }
@@ -35,15 +49,19 @@
 }
 
 .interests:hover .interest {
-    margin-bottom: -6px;
+    margin-bottom: -3px;
 }
 
 .interest {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     z-index: 1;
     box-sizing: border-box;
     margin-bottom: -60px;
     background-color: rgb(97, 70, 89);
     width: 100%;
+    min-width: 250px;
     padding: 20px;
     font-size: 20px;
     color: rgb(255, 250, 255);

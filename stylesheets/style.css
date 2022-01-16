@@ -12,8 +12,8 @@ body {
     display: flex;
     flex-direction: column;
     background-color: rgb(1, 17, 44);
-    background-image: url("../images/ball.jpeg");
-    background-size: 1500px;
+    background-image: url("../images/background.jpg");
+    background-size: cover;
     background-attachment: fixed;
     background-position: center;
 }
@@ -40,6 +40,7 @@ a {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: stretch;
 }
 
 .vl {
@@ -70,18 +71,21 @@ a {
     flex-grow: 1;
     flex-basis: 0;
     box-sizing: border-box;
-    min-width: 300px;
     padding: 10px 20px;
     text-align: center;
 }
 
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1200px) {
     .container {
         padding-left: 60px;
         padding-right: 60px;
     }
 }
 
-
-/*TODO: FIX STYLE ISSUES WITH NARROW PAGE*/
+@media screen and (max-width: 600px) {
+    .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
