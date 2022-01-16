@@ -93,33 +93,3 @@
 .souls-venus .bottom, .souls-venus .left, .souls-venus .right {
     background-image: linear-gradient(to top, #2c430a,  black);
 }
-
-@media only screen and (max-device-width: 500px) and (max-aspect-ratio: 1/1){
-    .book-hover-space {
-        width: 150px;
-        height: 150px;
-    }
-
-    .book {
-        width: 150px;
-        transform: rotateY(40deg) rotateX(-35deg) rotateZ(-5deg) translateY(60px);
-    }
-
-    .book .front {
-        width: 150px;
-        height: 150px;
-        transform: rotateX(90deg) translateZ(75px);
-    }
-
-    .book .bottom {
-        width: 150px;
-        height: 40px;
-        transform: translateZ(75px);
-    }
-
-    .book .left {
-        width: 150px;
-        height: 40px;
-        transform: rotateY(-90deg) translateZ(75px);
-    }
-}
