@@ -139,4 +139,12 @@
     .project-waiveo-wrapper-small-only {
         display: block;
     }
+
+    .right-shadow {
+        box-shadow: 0 10px 5px 3px;
+    }
+
+    .left-shadow {
+        box-shadow: 0 10px 5px 3px;
+    }
 }

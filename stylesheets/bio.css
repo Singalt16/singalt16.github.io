@@ -24,6 +24,7 @@
 .external-logos-container {
     margin-top: 40px;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     width: 100%;
     justify-content: space-evenly;
@@ -75,4 +76,15 @@
     z-index: 0;
     width: 20px;
     filter: invert(100%);
+}
+
+@media screen and (max-width: 900px) {
+    .bio {
+        flex-direction: column;
+    }
+
+    .interests-section {
+        height: 200px;
+        flex-basis: unset !important;
+    }
 }
